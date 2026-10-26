@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "Voz Nota — Voz a texto",
+  "short_name": "Voz Nota",
+  "description": "Dicta, edita y guarda tus transcripciones de voz.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f8fc",
+  "theme_color": "#f5f7ff",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

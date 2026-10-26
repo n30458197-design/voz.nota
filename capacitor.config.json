@@ -1,0 +1,6 @@
+{
+  "appId": "com.voznota.app",
+  "appName": "Voz Nota",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

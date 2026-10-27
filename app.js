@@ -536,10 +536,17 @@ setupAppInstallation();
 setupNativeSpeech();
 
 if (!SpeechRecognition) {
-  showStatus(
-    "El dictado no es compatible con este navegador. Aún puedes escribir y guardar textos.",
-    "error",
-  );
+  if (window.location.protocol === "file:") {
+    showStatus(
+      "Abre la app desde un servidor local como http://localhost:8000 para usar el micrófono.",
+      "error",
+    );
+  } else {
+    showStatus(
+      "El dictado no es compatible con este navegador. Aún puedes escribir y guardar textos.",
+      "error",
+    );
+  }
 }
 
 if (SpeechRecognition) createRecognition();

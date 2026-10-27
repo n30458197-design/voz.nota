@@ -394,6 +394,24 @@ textarea[readonly] {
   height: 17px;
 }
 
+.mic-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 0 0 12px;
+  color: #77738f;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.mic-help svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #8175db;
+}
+
 .card-footer {
   min-height: 53px;
   display: flex;

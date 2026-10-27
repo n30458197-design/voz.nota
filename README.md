@@ -2,6 +2,18 @@
 
 App de voz a texto para web, Android y escritorio. Las transcripciones se guardan en el almacenamiento local del dispositivo.
 
+## Usar la app en el navegador
+
+No abras `index.html` directamente como archivo (`file:///...`): los navegadores pueden bloquear el acceso al micrófono. Desde la carpeta del proyecto, inicia un servidor local:
+
+```sh
+npx http-server . -p 8000
+```
+
+Después abre <http://localhost:8000> en Chrome o Edge y permite el uso del micrófono cuando el navegador lo solicite. Si ya lo bloqueaste, abre los permisos del sitio desde el icono que aparece junto a la dirección web y habilita el micrófono; luego recarga la página.
+
+El servidor local solo permite acceder a la app desde tu propia computadora. Para compartirla con otras personas, publícala en un servicio de alojamiento web con HTTPS y comparte la dirección pública. `localhost` no es un enlace público.
+
 ## Crear instaladores
 
 Instala Node.js 20 o posterior y las dependencias del proyecto:

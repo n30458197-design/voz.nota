@@ -2,17 +2,28 @@
 
 App de voz a texto para web, Android y escritorio. Las transcripciones se guardan en el almacenamiento local del dispositivo.
 
-## Usar la app en el navegador
+## Compartir la app con otras personas
 
-No abras `index.html` directamente como archivo (`file:///...`): los navegadores pueden bloquear el acceso al micrófono. Desde la carpeta del proyecto, inicia un servidor local:
+Las personas que solo quieran usar la app **no necesitan descargar la carpeta ni ejecutar comandos**. Después de publicar el proyecto, solo tendrán que abrir el enlace HTTPS que genere GitHub Pages y permitir el acceso al micrófono.
+
+### Publicar gratis con GitHub Pages
+
+1. Sube este proyecto a un repositorio de GitHub. Puedes hacerlo desde la interfaz web de GitHub o desde el panel **Control de código fuente** de VS Code; los usuarios de la app no tienen que hacer esto.
+2. En el repositorio, abre **Settings → Pages** y elige **GitHub Actions** como origen de publicación.
+3. En **Actions**, ejecuta **Publish Voz Nota** con **Run workflow**, o publica los cambios en la rama `main` o `master`. La publicación se hará automáticamente.
+4. Cuando la ejecución termine correctamente, comparte la dirección HTTPS del sitio. Normalmente tendrá el formato `https://USUARIO.github.io/REPOSITORIO/`.
+
+El enlace público solo estará disponible después de conectar y subir este proyecto a un repositorio de GitHub y completar la primera publicación. No abras ni compartas `localhost`: solo funciona en la computadora que ejecuta el servidor.
+
+## Probar la app en tu computadora
+
+La prueba local es opcional; **no hace falta para publicar el sitio ni para que las personas lo usen**. Si quieres usarla, abre una terminal en la carpeta del proyecto e inicia un servidor:
 
 ```sh
 npx http-server . -p 8000
 ```
 
-Después abre <http://localhost:8000> en Chrome o Edge y permite el uso del micrófono cuando el navegador lo solicite. Si ya lo bloqueaste, abre los permisos del sitio desde el icono que aparece junto a la dirección web y habilita el micrófono; luego recarga la página.
-
-El servidor local solo permite acceder a la app desde tu propia computadora. Para compartirla con otras personas, publícala en un servicio de alojamiento web con HTTPS y comparte la dirección pública. `localhost` no es un enlace público.
+Abre <http://localhost:8000> en Chrome o Edge y permite el micrófono cuando el navegador lo solicite. El aviso «No segura» es normal en el servidor local; para compartirla con otras personas, usa el enlace HTTPS de GitHub Pages.
 
 ## Crear instaladores
 
